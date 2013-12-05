@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>
+        Mew
+    </title>
+
+    <!--styles-->
+    <link rel="stylesheet" type="text/css" href="_resource/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="_resource/css/common.css">
+    <link rel="stylesheet" type="text/css" href="_resource/css/tree/tree.css">
+
+</head>
+<body>
+
+<section id="dev-simplify">
+<header id="header">
+    <h1>Mew -- A dev tools that decorate Gruntjs with a GUI, make Frontend engineer to develop easier. </h1>
+</header>
+
+<section id="main">
+
+    <!--切换标签-->
+    <div id="switch-tabs" class="switch-tabs">
+        <div class="t">选择工具：</div>
+        <a href="javascript:void(0);" class="tab cur" data-wrapid="operating-wrap">打包</a>
+    </div>
+
+    <!--打包工具页-->
+    <div id="operating-wrap">
+
+        <div id="workPart">
+            <div class="desc">
+                选择文件打包到本地打包目录； <span> >>> </span>
+
+                <div class="arrow"></div>
+            </div>
+            <div class="btns">
+                <h5>代码目录：</h5>
+                <!--<input type="text" id="workPathInput" class="input-style"/>-->
+                <input type="text" id="packing-path" class="input-style"/>
+
+                <div id="packing-btn" class="btn"><img src="_resource/images/action_new_package.gif" alt="打包"
+                                                       title="打包"/></div>
+                <div class="divider"></div>
+
+                <!--<div id="showchecked-tree" class="btn"><img src="_resource/images/action_selected.gif"-->
+                                                            <!--title="选中了..."/></div>-->
+
+                <div id="switch-input-method-btn" class="btn highlight2"><img
+                        src="_resource/images/action_code_editor.gif" title="代码视图"/></div>
+                <div class="divider"></div>
+
+                <!--<input type="text" id="min-name" class="input-style" />-->
+                <div id="min-btn" class="btn">min</div>
+
+                <div class="divider"></div>
+                <div id="refresh-tree" class="btn"><img src="_resource/images/action_refresh.gif" alt="刷新目录"
+                                                        title="刷新目录"/></div>
+            </div>
+            <div class="tree-wrap">
+                <div id="tree-work" class="tree"></div>
+                <div id="custom-input-outter" class="custom-input-outter">
+                    <div class="custom-input-inner">
+                        <textarea id="custom-input"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="packPart">
+            <div class="desc">
+                选择包目录或文件上传到服务器； <span> >>> </span>
+
+                <div class="arrow"></div>
+            </div>
+            <div class="btns">
+                <h5>打包目录：</h5>
+                <input type="text" id="packPathInput" class="input-style" style="display:none"/>
+
+                <!--<div id="show-packlocal-btn" class="btn">本地</div>-->
+                <!--<div class="divider"></div>-->
+
+                <input type="text" id="rename-suffix" class="input-style"/>
+
+                <div id="rename-suffix-btn" class="btn">+后缀</div>
+                <div class="divider"></div>
+
+                <!--<div id="showchecked-treepackage" class="btn"><img src="_resource/images/action_selected.gif"-->
+                                                                   <!--title="选中了..."/></div>-->
+                <div id="delete-package-btn" class="btn"><img src="_resource/images/action_delete.gif"
+                                                              title="删除..."/></div>
+
+                <div id="zip-package-btn" class="btn"><img src="_resource/images/action_zip.gif" title="压缩包"/></div>
+
+                <div class="divider"></div>
+                <div id="refresh-tree-package" class="btn"><img src="_resource/images/action_refresh.gif" alt="刷新目录"
+                                                                title="刷新目录"/></div>
+
+                <div id="upload-btn" class="btn highlight" style="float:right;">上传</div>
+
+            </div>
+            <div class="tree-package-wrap">
+                <div id="tree-package" class="tree-package"></div>
+            </div>
+        </div>
+
+        <div id="serverPart">
+            <div class="desc">
+                上传完成！
+            </div>
+            <div class="btns">
+                <h5>服务器</h5>
+                <input type="text" id="serverPathInput" class="input-style" style="display:none"/>
+
+                <div id="show-packserver-btn" class="btn highlight">1</div>
+                <div id="show-testserver-btn" class="btn highlight">2</div>
+                <div class="divider"></div>
+
+                <div id="refresh-tree-server" class="btn"><img src="_resource/images/action_refresh.gif" alt="刷新目录"
+                                                               title="刷新目录"/></div>
+                <!--<div id="showchecked-treeserver" class="btn"><img src="_resource/images/action_selected.gif"-->
+                <!--title="选中了..."/></div>-->
+            </div>
+            <div class="tree-server-wrap">
+                <div id="tree-server" class="tree-server"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</section>
+
+<section id="introduce">
+    <div class="description">
+        说明:<br/>
+        一.安装<br/>
+        1. 先下载并安装 Node.js，<a href="http://www.nodejs.org/download/" class="btn" style="float:none"
+                             target="_blank">下载</a>(Node.js版本>=0.8.0)；<br/>
+        2. 点击 <a href="javascript:;" id="install-btn" class="btn" style="float:none;">安装</a>，等待一会儿，待命令行窗口关闭；<br/>
+        3. 确保_resource文件夹为“可写”，并配置其下js/user-conf.js内的路径;<br/>
+        4. 回到浏览器， 遇到安全提示均选“是”。 <br/>
+        <br/>
+        注意： 此工具只支持IE浏览器。
+    </div>
+</section>
+
+<footer id="footer">
+    <p id="tools-version" style="font-style:italic"></p>
+</footer>
+</section>
+
+
+<!--目录树图片文件预览-->
+<div id="imgPreviewer" class="imgPreviewer">
+    <img src="no.jpg" alt=""/>
+
+    <div class="title"></div>
+</div>
+
+
+<!--scripts-->
+
+<script type="text/javascript" src="_resource/js/libs/json2.js"></script>
+<!--<script type="text/javascript" src="_resource/js/libs/require.js"></script>-->
+<script type="text/javascript" src="_resource/js/libs/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="_resource/js/libs/underscore/underscore-1.5.1-min.js"></script>
+<script type="text/javascript" src="_resource/js/libs/underscore/underscore.string.js"></script>
+<script type="text/javascript" src="_resource/js/libs/backbone/backbone-min.js"></script>
+<!--<script type="text/javascript" src="_resource/js/libs/backbone/backbone.localStorage.js"></script>-->
+<!--<script type="text/javascript" src="_resource/js/libs/backbone/backbone.marionette.js"></script>-->
+<script type="text/javascript"> _.mixin(_.str.exports()) </script>
+<script type="text/javascript" src="_resource/js/libs/jquery/jquery.tree.js"></script>
+
+<script type="text/javascript" src="_resource/js/utils.js"></script>
+<script type="text/javascript" src="_resource/js/user-conf.js"></script>
+<script type="text/javascript" src="_resource/js/sys-conf.js"></script>
+<script type="text/javascript" src="_resource/js/cover-layer.js"></script>
+
+<script type="text/javascript" src="_resource/js/models/app-model.js"></script>
+<script type="text/javascript" src="_resource/js/models/tree-model.js"></script>
+<script type="text/javascript" src="_resource/js/models/work-model.js"></script>
+<script type="text/javascript" src="_resource/js/models/pack-model.js"></script>
+
+<script type="text/javascript" src="_resource/js/views/tree-view.js"></script>
+<script type="text/javascript" src="_resource/js/views/work-view.js"></script>
+<script type="text/javascript" src="_resource/js/views/pack-view.js"></script>
+<script type="text/javascript" src="_resource/js/views/server-view.js"></script>
+<script type="text/javascript" src="_resource/js/views/app-view.js"></script>
+
+<script type="text/javascript" src="_resource/js/app.js"></script>
+
+
+</body>
+</html>

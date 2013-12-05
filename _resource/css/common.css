@@ -1,0 +1,478 @@
+/*工具*/
+.hidden {
+    display: none;
+}
+
+/*全局*/
+body {
+    font-family: 'Microsoft Yahei', Arial;
+    font-size: 12px;
+    background-color: #f6f6f6;
+}
+
+.switch-tabs {
+    padding: 15px 0 5px;
+    margin: 0 5px 10px;
+    height: 30px;
+    border-bottom: 2px solid #528CE0;
+}
+
+.switch-tabs .t {
+    float:left;
+    font:normal 14px/26px 'Microsoft YaHei';
+    margin-right:5px;
+}
+
+.switch-tabs a.tab {
+    float: left;
+    padding: 5px;
+    border: 1px solid #fec107;
+    margin-right: 10px;
+    cursor: pointer;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-decoration: none;
+    color:#000;
+}
+
+.switch-tabs .tab:hover {
+    background:#f8ebc5;
+}
+
+.switch-tabs a.cur, .switch-tabs a.cur:hover {
+    background: #fec107;
+}
+
+#main {
+    clear: both;
+}
+
+.divider {
+    width: 0;
+    float: left;
+    border-left: 1px dotted gray;
+    height: 20px;
+    margin-top: 3px;
+    padding: 0 0 0 5px;
+}
+
+#header {
+    position: relative;
+}
+
+#header h1 {
+    font-size: 18px;
+    font-style: italic;
+    padding: 13px 10px;
+    text-shadow: 2px 2px 2px #eee;
+    float: left;
+    line-height: 28px;
+    color: #ccc;
+}
+
+#header .logo {
+    position: absolute;
+    width: 53.7px;
+    height: 50px;
+
+}
+
+#slogan {
+    float: left;
+    font-size: 14px;
+    font-family: Arial;
+    padding: 15px 10px 5px;
+}
+
+#tools-version {
+    clear: both;
+    float: right;
+    padding: 0 10px 20px 0;
+}
+
+p {
+    padding: 10px
+}
+
+.btns h5 {
+    float: left;
+    font-weight: bold;
+    line-height: 26px;
+    padding-right: 10px;
+    padding-left: 5px;
+    font-size: 16px;
+
+}
+
+#introduce {
+    clear: both;
+}
+
+.description {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 5px 0 10px 10px;
+    margin: 5px 0;
+    background: #f5f2ce;
+}
+
+#operating-wrap {
+    float: left;
+    width: 100%;
+    /*background:url("../images/center_divider.gif") center center repeat-y;*/
+    clear: both;
+}
+
+#workPart, #packPart, #serverPart {
+    position: relative;
+}
+
+.tree-wrap, .tree-package-wrap, .tree-server-wrap {
+    width: 99.5%;
+    height: 600px;
+    float: left;
+    overflow: hidden;
+    margin: 7px .25% 7px .25%;
+    position: relative;
+
+    clear: both;
+    background: #2175c9;
+}
+
+#workPart h5 {
+    color: #2175c9;
+}
+
+.tree-package-wrap {
+    background: #2175c9;
+}
+
+#packPart h5 {
+    color: #2175c9;
+}
+
+.tree-server-wrap {
+    background: #cd0900;
+}
+
+#serverPart h5 {
+    color: #cd0900;
+}
+
+.custom-input-outter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fec107;
+
+    display: none;
+}
+
+.tree, .tree-package, .tree-server, .custom-input-inner {
+    margin: 3px;
+    background: #fff;
+    height: 594px;
+    overflow: auto;
+}
+
+.custom-input-inner textarea {
+    width: 99%;
+    height: 99%;
+}
+
+/*#workPart .arrow, #packPart .arrow {*/
+/*width:50px;*/
+/*height:50px;*/
+/*position:absolute;*/
+/*right:0px;*/
+/*top:-5px;*/
+
+/*background:url(../images/arrow_bg.png) center center no-repeat #fff;*/
+/*}*/
+
+#workPart .desc, #packPart .desc, #serverPart .desc {
+    width: 99%;
+    margin:auto;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    /*text-indent: 5px;*/
+    text-align: center;
+    border: 1px solid #fff;
+    border-width: 0 0 1px;
+    margin-bottom: 10px;
+    font-style: italic;
+    color: #000 !important;
+    position: relative;
+
+}
+
+#workPart .desc span, #packPart .desc span {
+    position: absolute;
+    right:-2px;
+    font-size: 16px;
+    color: #2175c9;
+}
+
+#packPart .desc span {
+    color: #2175c9;
+}
+
+#workPart .desc {
+    color: #2175c9;
+    border-color: #2175c9;
+}
+
+#packPart .desc {
+    color: #2175c9;
+    border-color: #2175c9;
+}
+
+#serverPart .desc {
+    color: #2175c9;
+    border-color: #ed0000;
+}
+
+#workPathInput, #packPathInput, #serverPathInput {
+    width: 50px;
+}
+
+.btn {
+    float: left;
+    font-size: 12px;
+    padding: 3px;
+    height: 18px;
+    line-height: 18px;
+    border: 1px solid #F3F3F3;
+    background: #eee;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.highlight, .highlight2, .highlight3 {
+    font-weight: bold;
+    padding: 3px 3px;
+    border-width: 1px;
+    border-color: #ed0000;
+    color: #ed0000;
+    background: #fff;
+}
+
+.highlight2 {
+    border-color: #fec107;
+    color: #fec107;
+    font-weight: normal;
+}
+
+.highlight3 {
+    border-color: #6699cc;
+    color: #6699cc;
+    font-weight: normal;
+}
+
+.input-title {
+    float: left;
+    line-height: 25px;
+    font-size: 12px;
+}
+
+.input-style {
+    float: left;
+    font-size: 12px;
+    padding: 3px;
+    height: 18px;
+    width: 50px;
+    line-height: 18px;
+    border: 1px solid #446cd7;
+    background: #f6f4e5;
+    margin-right: 5px;
+}
+
+#workPart, #packPart, #serverPart {
+    float: left;
+    width: 33.33333%;
+    margin: 0 0 10px;
+    overflow: hidden;
+}
+
+.btns {
+    width: 100%;
+    height: 25px;
+    float: left;
+    margin: 5px 0;
+}
+
+#cover-layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    overflow: hidden;
+    display: none;
+}
+
+#cover-layer .layer {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    filter: alpha(Opacity=50);
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#cover-layer p {
+    padding-left: 40px;
+    background: url(../images/loading.gif) left center no-repeat;
+    line-height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    color: #000;
+    font: bold 16px 'Microsoft Yahei', Arial;
+    text-align: center;
+}
+
+.imgPreviewer {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    padding: 7px 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.imgPreviewer img {
+    max-height: 500px;
+    max-width: 200px;
+}
+
+.imgPreviewer .title {
+    width: 200px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+}
+
+/***********************************************************************
+    专题区
+************************************************************************/
+/*#zt-wrap {margin:0 auto;width:980px;}*/
+#ztPart {
+    float: left;
+    width: 980px;
+    margin: 0 0 15px;
+    clear: both;
+    background: #fff;
+}
+
+#ztTree {
+    width: 270px;
+    height: 605px;
+    padding: 0 0 5px;
+    float: left;
+    overflow: auto;
+    border: 2px solid #6699cc;
+}
+
+.tree-zt-wrap {
+    height:575px;
+    overflow:auto;
+    margin-top:8px;
+}
+
+.ztTreeBtns {
+    width:100%;
+    height:25px;
+}
+
+.ztTreeBtns #refresh-zt-tree {width:10%;float:left;padding:0;margin:0;border:none;height:25px;text-align:center;}
+.ztTreeBtns #refresh-zt-tree img {vertical-align: middle;}
+
+a#addToUploadList:link, a#addToUploadList:visited {
+    display:block;
+    float:right;
+    width: 90%;
+    height: 25px;
+    background: #ffcc00;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 25px;
+    color: #212121;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a#addToUploadList:active {
+    color:gray;
+}
+
+a#addToUploadList:hover {
+    background:#fff446;
+}
+
+#ztConfig {
+    width: 679px;
+    height: 594px;
+    overflow: auto;
+    padding: 8px;
+    float: right;
+    border: 2px solid #6699cc;
+}
+
+#updateBtn {
+    float: right;
+}
+
+.ztpath {
+    margin: 7px 0;
+}
+
+/* 上传列表 */
+.status-pannel table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.status-pannel th {font-size:13px;}
+
+.status-pannel th,
+.status-pannel td {
+    text-align: center;
+    border: #ccc solid 1px;
+    padding: 5px;
+    overflow-x:hidden;
+}
+
+.status-pannel th {
+    background-color: #f9f9f9;
+    height: 20px;
+    color: #333;
+}
+
+#uploaderCon {
+    position: relative;
+}
+
+.upload-link,
+.preview-link,
+.del-link {
+    margin: auto 5px;
+}
+
+.status-pannel .disabled {
+    color: #333;
+}
+
+

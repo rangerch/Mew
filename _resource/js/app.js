@@ -7,9 +7,9 @@
 namespace('app');
 
 (function(){
-//    try {
+    try {
         app.view.appView.render(); //app initial
-//    } catch ( e ) {
-//        alert(e);
-//    }
+    } catch ( e ) {
+        alert(e);
+    }
 })();
